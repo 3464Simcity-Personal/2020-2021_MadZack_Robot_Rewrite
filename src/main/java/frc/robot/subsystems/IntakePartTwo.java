@@ -18,7 +18,7 @@ public class IntakePartTwo extends SubsystemBase {
     }
 
 
-    public void extendIntake() {
+    public void extendIntakeTwo() {
         Actuator.set(0.5);
     }
 
@@ -26,7 +26,7 @@ public class IntakePartTwo extends SubsystemBase {
         Actuator.set(0);
     }
 
-    public void retractIntake() {
+    public void retractIntakeTwo() {
         Actuator.set(-0.5);
     }
 
