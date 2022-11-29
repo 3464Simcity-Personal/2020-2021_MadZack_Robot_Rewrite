@@ -37,6 +37,7 @@ public class RobotContainer {
   private final PneumaticsSub pneumSub = new PneumaticsSub();
   private final IntakeSub intakeSub = new IntakeSub();
   private final ElevatorSub elevatorSub = new ElevatorSub();
+  private final IntakePartTwo intakeTwoSub = new IntakeTwoSub();
 
   // Here's the command that uses it. 
   private final DriveTank move = new DriveTank(driveTankSub);
@@ -46,7 +47,9 @@ public class RobotContainer {
   private final ElevatorDown downElevator = new ElevatorDown(elevatorSub, pneumSub);
   private final ElevatorUp upElevator = new ElevatorUp(elevatorSub,pneumSub);
   private final ArcadeDriveCMD arcadeDrive = new ArcadeDriveCMD(driveTankSub);
-
+  private final ExtendIntakeTwo extendIntake = new ExtendIntakeTwo(intakeTwoSub);
+  private final RetractIntakeTwo retractIntake = new RetractIntakeTwo(intakeTwoSub);
+  private final RunIntake runIntake = new RunIntake(intakeTwoSub);
 
   /** The container for the robot. Contains subsystems, OI devices, and commands. */
   public RobotContainer() {
@@ -78,6 +81,10 @@ public class RobotContainer {
     OI.povButtonDown.whileHeld(downElevator);
     //sucks balls in when button 3 is pressed using intake, retracts intake when released
     OI.button3.whenHeld(intakeBalls);
+    OI.button8.whileHeld(extendIntake);
+    OI.button6.whileHeld(runIntake);
+    OI.button7.whileHeld(retractIntake);
+    
     // OI.button3.whenReleased(new InstantCommand(intakeSub::retractIntake, intakeSub));
     // OI.button3.whenReleased(new InstantCommand(pneumSub::closeAll, pneumSub));
     // OI.button3.whenReleased(new InstantCommand(conveyerSub::stop, conveyerSub));
