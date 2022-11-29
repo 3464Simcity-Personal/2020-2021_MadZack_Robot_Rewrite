@@ -37,7 +37,7 @@ public class RobotContainer {
   private final PneumaticsSub pneumSub = new PneumaticsSub();
   private final IntakeSub intakeSub = new IntakeSub();
   private final ElevatorSub elevatorSub = new ElevatorSub();
-  private final IntakePartTwo intakeTwoSub = new IntakeTwoSub();
+  private final IntakePartTwo intakeTwoSub = new IntakePartTwo();
 
   // Here's the command that uses it. 
   private final DriveTank move = new DriveTank(driveTankSub);
@@ -81,6 +81,8 @@ public class RobotContainer {
     OI.povButtonDown.whileHeld(downElevator);
     //sucks balls in when button 3 is pressed using intake, retracts intake when released
     OI.button3.whenHeld(intakeBalls);
+
+    //bem stuff
     OI.button8.whileHeld(extendIntake);
     OI.button6.whileHeld(runIntake);
     OI.button7.whileHeld(retractIntake);
