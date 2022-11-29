@@ -45,7 +45,7 @@ public class OI {
         button3 = new JoystickButton(rightStick, 3);
         button4 = new JoystickButton(rightStick, 4);
         button5 = new JoystickButton(rightStick, 5);
-        button6 = new JoystickButton(rightStick, 6);
+        button7 = new JoystickButton(rightStick, 7);
         button8 = new JoystickButton(rightStick, 8);
         povButtonUp = new POVButton(rightStick, 0);
         povButtonDown = new POVButton(rightStick, 180);
