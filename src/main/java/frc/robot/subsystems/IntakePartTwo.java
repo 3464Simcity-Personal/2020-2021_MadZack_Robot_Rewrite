@@ -1,16 +1,17 @@
 package frc.robot.subsystems;
-
+import edu.wpi.first.wpilibj.motorcontrol.Spark;
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
 
-private final Spark intakeMotor = new Spark(0);
-private final Spark Actuator = new Spark(1)
+
 
 public class IntakePartTwo extends SubsystemBase {
-    
+private Spark intakeMotor = new Spark(5);
+private Spark Actuator = new Spark(6); 
     public IntakePartTwo() {}
 
     public void runIntake() {
         intakeMotor.set(0.5);
+        
     }
     
     public void stopIntake() {
@@ -20,6 +21,7 @@ public class IntakePartTwo extends SubsystemBase {
 
     public void extendIntakeTwo() {
         Actuator.set(0.5);
+      
     }
 
     public void stopActuator() {
@@ -28,6 +30,7 @@ public class IntakePartTwo extends SubsystemBase {
 
     public void retractIntakeTwo() {
         Actuator.set(-0.5);
+       
     }
 
 

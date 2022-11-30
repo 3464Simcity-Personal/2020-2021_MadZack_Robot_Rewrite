@@ -17,6 +17,7 @@ import edu.wpi.first.wpilibj2.command.button.POVButton;
 public class OI {
     public static JoystickButton
     button8,
+    button7,
     button6,
     button5,
     button4,
@@ -45,6 +46,7 @@ public class OI {
         button3 = new JoystickButton(rightStick, 3);
         button4 = new JoystickButton(rightStick, 4);
         button5 = new JoystickButton(rightStick, 5);
+        button6 = new JoystickButton(rightStick, 6);
         button7 = new JoystickButton(rightStick, 7);
         button8 = new JoystickButton(rightStick, 8);
         povButtonUp = new POVButton(rightStick, 0);

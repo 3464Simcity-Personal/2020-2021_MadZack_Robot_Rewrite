@@ -1,4 +1,4 @@
-// Copyright (c) FIRST and other WPILib contributors.
+/*// Copyright (c) FIRST and other WPILib contributors.
 // Open Source Software; you can modify and/or share it under the terms of
 // the WPILib BSD license file in the root directory of this project.
 
@@ -10,7 +10,7 @@ import com.revrobotics.CANSparkMaxLowLevel;
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
 
 public class ShooterSub extends SubsystemBase {
-  /** Creates a new Shoot. */
+
 // leftFront = new CANSparkMax(leftFrontInt, CANSparkMaxLowLevel.MotorType.kBrushless), 
 
   private final CANSparkMax shooter = new CANSparkMax(2, CANSparkMaxLowLevel.MotorType.kBrushless);
@@ -40,3 +40,4 @@ public class ShooterSub extends SubsystemBase {
     // This method will be called once per scheduler run
   }
 }
+*/
